@@ -1,0 +1,91 @@
+.image {
+  height: 52em;
+  background-size: cover;
+  /*width: auto;*/
+  background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-113384.png');
+  background-position: 50% 50%;
+  /*flex: 1 1 auto;*/
+  /*display: flex;*/
+  /*overflow: hidden;*/
+  background-size: cover;
+}
+.button {
+  background-color: #415f86;
+  border: none;
+  color: white;
+  padding: 1.25em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+}
+.btn-center {
+  float: left;
+  font-family: 'Do Hyeon', sans-serif;
+  border-width: 0em;
+  color:#ffffff;
+  padding: 1em 2em;
+}
+.btn-left {
+  /*
+  background-color:  #6a88ad7e;
+  */
+  background-color:  #8ab1e07e;
+  border-radius: 2em 0em 0em 2em;
+}
+.btn-right {
+  /*
+  background-color: #42546b7e;
+  */
+  background-color: #5d77997e;
+  border-radius: 0em 2em 2em 0em;
+}
+.btn-right a {
+  color: white;
+}
+.btn-right a:hover {
+  text-decoration: none;
+}
+.btn-center:hover{
+  background-color: #7da5b1;
+  padding: 1em 4em;
+}
+.heading p{
+  font-size: 3em;
+  font-family: 'Do Hyeon', sans-serif;
+}
+.heading p.text-danger{
+  font-size: 2.5em;
+}
+.bottom-text p{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+/*
+.left-button{
+  border-radius: 2em 2em 2em 2em;
+  background-color: #6a88ada8;
+  border-color: #000000;
+  border-width: 0em;
+  font-family: 'Do Hyeon', sans-serif;
+  display: inline-block;
+  color: white;
+  width: 100%;
+}
+.right-button{
+  border-radius: 2em 2em 2em 2em;
+  background-color: #4a5e779a;
+  border-color: #000000;
+  border-width: 0em;
+  font-family: 'Do Hyeon', sans-serif;
+  display: inline-block;
+  color: white;
+  width: 100%;
+}
+  .btn-round-lg:hover{
+    border-width: 0.09em;
+  }
+*/
