@@ -18,7 +18,6 @@ body {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form input {
-  font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -29,7 +28,6 @@ body {
   font-size: 14px;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #415f86;
