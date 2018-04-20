@@ -1,28 +1,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="container-fluid">
-  <div class="login-page">
-    <div class="form"><!--
-      <form class="register-form">
-        <input type="text" placeholder="name" />
-        <input type="password" placeholder="password" />
-        <input type="text" placeholder="email address" />
-        <button>create</button>
-        <p class="message">Already registered?
-          <a href="#">Sign In</a>
-        </p>
-      </form>-->
-      <form class="login-form">
-        <input type="text" placeholder="username" />
-        <input type="password" placeholder="password" />
-        <button>login</button>
-        <button class="google-button">
-          login with
-          <i class="fa fa-google-plus"></i>
-        </button>
-        <p class="message">Not registered?
-          <a href="#">Create an account</a>
-        </p>
-      </form>
+<div class="background">
+  <div class="container-fluid">
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form">
+          <input type="text" placeholder="username" />
+          <input type="password" placeholder="password" />
+          <button>login</button>
+          <button class="google-button">
+            <i class="fa fa-google-plus"></i>
+            login with google
+          </button>
+          <p class="message">Not registered?
+            <a routerLink="/register">Create an account</a>
+          </p>
+        </form>
+      </div>
     </div>
   </div>
 </div>

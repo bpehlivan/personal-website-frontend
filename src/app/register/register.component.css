@@ -1,11 +1,11 @@
 
 .background {
-  height: 51em;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-color: #5d7799;
-}
-.login-page {
+    height: 51em;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: #5d7799;
+  }
+.register-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
@@ -45,17 +45,10 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form .google-button{
-    background: #9f062a;
-    font-size: 12px;
-}
-
 .form button:hover,.form button:active,.form button:focus {
   background: #273a52;
 }
-.form .google-button:hover,.form .google-button:active,.form .google-button:focus {
-    background: #66071d;
-  }
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
