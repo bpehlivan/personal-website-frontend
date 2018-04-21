@@ -10,7 +10,7 @@ import { HomeComponent } from './beforeLogin/home/home.component';
 import { LoginComponent } from './beforeLogin/login/login.component';
 import { RegisterComponent } from './beforeLogin/register/register.component';
 import { ToDoComponent } from './afterLogin/to-do/to-do.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './afterLogin/dashboard/dashboard.component';
 
 const RoutingConf: Route[] = [
   {
