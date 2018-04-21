@@ -1,0 +1,44 @@
+.navbar {
+  border-radius: 0px;
+  border: 0px;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  color: rgb(53, 158, 161);
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.navbar-brand:hover {
+  color: rgb(159, 6, 42);
+}
+
+.navbar-inverse {
+  background-color: rgb(0, 0, 0);
+}
+
+#myNavbar ul li a {
+  color: rgb(255, 255, 255);
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+#myNavbar ul li a:hover {
+  color: rgb(159, 6, 42);
+}
+
+#myNavbar ul li.active a {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 161, 0);
+}
+
+#myNavbar ul li.active a:hover {
+  color: rgb(159, 6, 42);
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a, .navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: rgb(0, 0, 0);
+    color:#ffffff;
+  }
+  .navbar-inverse .dropdown-menu {
+    background-color: rgb(0, 0, 0);
+    color:#ffffff;
+}

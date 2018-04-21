@@ -10,6 +10,7 @@ import { HomeComponent } from './beforeLogin/home/home.component';
 import { LoginComponent } from './beforeLogin/login/login.component';
 import { RegisterComponent } from './beforeLogin/register/register.component';
 import { ToDoComponent } from './afterLogin/to-do/to-do.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const RoutingConf: Route[] = [
   {
@@ -42,7 +43,13 @@ const RoutingConf: Route[] = [
   },
   {
     path: 'todo',
-    component: ToDoComponent
+    component: ToDoComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardComponent
+      }
+    ]
   }
 ];
 
@@ -54,7 +61,8 @@ const RoutingConf: Route[] = [
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    ToDoComponent
+    ToDoComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
