@@ -1,33 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './beforeLogin/navbar/navbar.component';
+import { AboutComponent } from './beforeLogin/about/about.component';
+import { HomeComponent } from './beforeLogin/home/home.component';
+import { LoginComponent } from './beforeLogin/login/login.component';
+import { RegisterComponent } from './beforeLogin/register/register.component';
+import { ToDoComponent } from './afterLogin/to-do/to-do.component';
 
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    AboutComponent,
-    HomeComponent,
-    LoginComponent,
-    RegisterComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    RouterModule.forRoot([
+const RoutingConf: Route[] = [
+  {
+    path: '',
+    component: NavbarComponent,
+    children: [
       {
         path: '',
         redirectTo: 'home',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'home',
@@ -45,7 +37,29 @@ import { RegisterComponent } from './register/register.component';
         path: 'register',
         component: RegisterComponent
       }
-    ])
+    ]
+
+  },
+  {
+    path: 'todo',
+    component: ToDoComponent
+  }
+];
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    AboutComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    ToDoComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpModule,
+    RouterModule.forRoot(RoutingConf)
   ],
   providers: [],
   bootstrap: [AppComponent]
