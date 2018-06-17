@@ -1,12 +1,14 @@
-.image {
+
+.container-fluid {
   height: 52em;
   background-size: cover;
   /*width: auto;*/
-  background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-113384.png');
-  background-position: 50% 50%;
+  /*background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-113384.png');*/
+  background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-578814.jpg');
+  /*background-position: 50% 50%;*/
   /*flex: 1 1 auto;*/
   /*display: flex;*/
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .button {
   background-color: #415f86;
@@ -30,14 +32,14 @@
   /*
   background-color:  #6a88ad7e;
   */
-  background-color:  #8ab1e07e;
+  background-color:  #8ab1e0d0;
   border-radius: 2em 0em 0em 2em;
 }
 .btn-right {
   /*
   background-color: #42546b7e;
   */
-  background-color: #5d77997e;
+  background-color: #5d7799b7;
   border-radius: 0em 2em 2em 0em;
 }
 .btn-right a {
@@ -63,6 +65,16 @@
   font-style: italic;
   color: rgb(255, 255, 255);
 }
+p{
+  color: white;
+}
+p .head-down{
+  color: #e91b48;
+}
+#top{
+  background-color: #00000063;
+}
+
 /*
 .left-button{
   border-radius: 2em 2em 2em 2em;
