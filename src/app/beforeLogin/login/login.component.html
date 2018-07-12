@@ -5,6 +5,7 @@
       <div class="form">
         <form (ngSubmit)="authanticate()" class="login-form">
           <input type="text" [(ngModel)]="username" name="user" placeholder="username" required/>
+          <p [class.hidden]="!isAuthanticatedFail" class="failMessage">Wrong username or password</p>
           <input type="password" [(ngModel)]="password" name="pass" placeholder="password" required/>
           <button type="submit">login</button>
           <button class="google-button">

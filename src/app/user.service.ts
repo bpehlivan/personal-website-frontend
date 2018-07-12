@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Response } from '@angular/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 export interface AuthToken {
   token: string;
+  username: string;
 }
 
 @Injectable()
@@ -24,6 +26,14 @@ export class UserService {
       },
       {
         headers: requestHeader
-      });
+      })
+      .catch(this.errorHandler);
+  }
+
+  errorHandler(error: HttpErrorResponse) {
+    if (error.status === 400) {
+
+    }
+    return Observable.throw(error.message || 'Server Error');
   }
 }

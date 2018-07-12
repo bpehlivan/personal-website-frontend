@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,16 +12,31 @@ export class LoginComponent implements OnInit {
   token: string;
   username: string;
   password: string;
-  constructor(private userService: UserService) { }
+  user: string;
+  isAuthanticatedFail = false;
+  public errorMsg = 'empty';
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }
 
   authanticate() {
+    this.isAuthanticatedFail = false;
     this.userService.userAuthantication(this.username, this.password)
-      .subscribe(resp => this.token = resp['token']);
-    console.log(this.username, this.password); // for testig purposers
-    console.log(this.token); // for testig purposers
+      .subscribe(
+        resp => {
+          this.token = resp['token'],
+            this.user = resp['username'];
+          console.log(resp);
+          this.router.navigateByUrl('/fittrack');
+        },
+        error => {
+          // this.errorMsg = error;
+          console.log(error);
+          this.password = '';
+          this.isAuthanticatedFail = true;
+        }
+      );
   }
 
 }

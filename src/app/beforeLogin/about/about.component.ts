@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   }
 
   scroll(el) {
-    let element: any = document.getElementById(el);
+    const element: any = document.getElementById(el);
     element.scrollIntoView({
       behavior: 'smooth'
     });

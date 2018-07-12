@@ -68,3 +68,7 @@
 .form .register-form {
   display: none;
 }
+.failMessage {
+  color: #66071d;
+  font-size: 0.85em;
+}
