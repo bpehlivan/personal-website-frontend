@@ -2,11 +2,13 @@
 .background {
   height: 51em;
   background-size: cover;
-  background-position: 50% 50%;
+  /*background-position: 50% 50%;*/
+  background-position: center;
   background-color: #5d7799;
 }
+
 .login-page {
-  width: 360px;
+  /*width: 360px;*/
   padding: 8% 0 0;
   margin: auto;
 }

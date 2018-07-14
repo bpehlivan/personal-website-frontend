@@ -1,8 +1,9 @@
+
+import { throwError as observableThrowError, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+
+
 
 export interface AuthToken {
   token: string;
@@ -26,14 +27,6 @@ export class UserService {
       },
       {
         headers: requestHeader
-      })
-      .catch(this.errorHandler);
-  }
-
-  errorHandler(error: HttpErrorResponse) {
-    if (error.status === 400) {
-
-    }
-    return Observable.throw(error.message || 'Server Error');
+      });
   }
 }
