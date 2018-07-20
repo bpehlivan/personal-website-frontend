@@ -1,16 +1,22 @@
 <div class="background">
-  <div class="container-fluid">
-    <div class="register-page">
-      <div class="form">
-        <form class="login-form">
-          <input type="text" placeholder="username" />
-          <input type="password" placeholder="password" />
-          <input type="email" placeholder="email" />
-          <button>sign up</button>
-          <p class="message">Already registered?
-            <a routerLink="/login">Sign in</a>
-          </p>
-        </form>
+  <div class="container">
+    <div class="row">
+      <div class="register-page">
+        <div class="form">
+          <form (ngSubmit)="register()" class="login-form">
+            <input type="text" [(ngModel)]="username" name="user_name" placeholder="username" />
+            <input type="text" [(ngModel)]="firstName" name="first name" placeholder="first name" />
+            <input type="text" [(ngModel)]="lastName" name="last name" placeholder="last name" />
+            <input type="email" [(ngModel)]="email" name="e-mail" placeholder="email" />
+            <input type="password" [(ngModel)]="password" name="password1" placeholder="password" required/>
+            <input type="password" [(ngModel)]="password2" name="password_2" placeholder="password again" required/>
+            <p [class.hidden]="!isRegistrationFail" style="color: red" class="failMessage">Something went wrong!</p>
+            <button type="submit">sign up</button>
+            <p class="message">Already registered?
+              <a routerLink="/login">Sign in</a>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
