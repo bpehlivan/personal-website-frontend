@@ -5,7 +5,7 @@ import { AboutComponent } from './beforeLogin/about/about.component';
 import { HomeComponent } from './beforeLogin/home/home.component';
 import { LoginComponent } from './beforeLogin/login/login.component';
 import { RegisterComponent } from './beforeLogin/register/register.component';
-
+import { AuthGuard } from './auth-guard.service';
 const routes: Routes = [
     {
         path: '',
@@ -37,6 +37,7 @@ const routes: Routes = [
     },
     {
         path: 'fittrack',
+        canActivate: [AuthGuard],
         loadChildren: 'app/afterlogin/afterlogin.module#AfterloginModule'
     }
 ];

@@ -27,7 +27,8 @@ export class LoginComponent implements OnInit {
         resp => {
           this.token = resp['token'],
             this.user = resp['username'];
-          console.log(resp);
+          localStorage.setItem('token', this.token);
+          localStorage.setItem('isAuthanticated', 'true');
           this.router.navigateByUrl('/fittrack');
         },
         error => {
