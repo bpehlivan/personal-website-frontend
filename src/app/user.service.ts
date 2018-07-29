@@ -1,19 +1,6 @@
-
-import { throwError as observableThrowError, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-
-
-
-export interface AuthToken {
-  token: string;
-  username: string;
-}
-
-export interface Register {
-  response: string;
-}
-
+import { AuthToken, Register, GetRecords, Record } from './interfaces';
 @Injectable()
 export class UserService {
 
@@ -55,5 +42,15 @@ export class UserService {
       {
         headers: requestHeader
       });
+  }
+
+  getRecords(token: string) {
+    const url = '/getrecords';
+    const header = new HttpHeaders({
+      'Authorization': 'Token ' + token
+    });
+    return this.http.get<GetRecords>(this.host + url, {
+      headers: header
+    });
   }
 }

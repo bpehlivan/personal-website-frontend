@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
           this.token = resp['token'],
             this.user = resp['username'];
           localStorage.setItem('token', this.token);
+          localStorage.setItem('username', this.username);
           localStorage.setItem('isAuthanticated', 'true');
           this.router.navigateByUrl('/fittrack');
         },

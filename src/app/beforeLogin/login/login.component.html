@@ -9,10 +9,11 @@
             <p [class.hidden]="!isAuthanticatedFail" class="failMessage">Wrong username or password</p>
             <input type="password" [(ngModel)]="password" name="pass" placeholder="password" required/>
             <button type="submit">login</button>
+            <!--
             <button class="google-button">
               <i class="fa fa-google-plus"></i>
               login with google
-            </button>
+            </button>-->
             <p class="message">Not registered?
               <a routerLink="/register">Create an account</a>
             </p>

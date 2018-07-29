@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">TODO</a>
+      <a class="navbar-brand" routerLink='/fittrack'>TODO</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -39,18 +39,19 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            <span class="glyphicon glyphicon-user"></span> Person
+            <span class="glyphicon glyphicon-user"></span> {{ username }}
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+              <a href="#">
+                <span class="glyphicon glyphicon-cog"></span> Settings</a>
             </li>
             <li>
 
-              <a href="#">
+              <a (click)="logout()">
                 <span class="glyphicon glyphicon-off"></span>
-                 Logout</a>
+                Logout</a>
             </li>
           </ul>
         </li>
@@ -58,3 +59,4 @@
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet>
